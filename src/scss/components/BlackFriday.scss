@@ -7,13 +7,11 @@
 
   .black-friday-wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 65%;
 
     .deal-toolbar-text {
-      margin-right: 10px;
-
       .save-up {
         color: #ef3636;
       }
@@ -69,13 +67,19 @@
       line-height: 30px;
       border-radius: 50%;
       color: #fff;
+      margin-left: 20px;
     }
   }
 }
 
-// Hide this component after 1100px
+// Media
 @media (max-width: 1100px) {
   .black-friday {
     display: none;
+  }
+}
+@media (max-width: 1200px) {
+  .black-friday-wrapper {
+    width: 70% !important;
   }
 }

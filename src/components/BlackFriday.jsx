@@ -50,7 +50,7 @@ class BlackFriday extends React.Component {
             <div className="black-friday-wrapper">
               <div className="deal-toolbar-text">
                 <div>
-                  Black Friday.
+                  <strong>Black Friday. </strong>
                   <strong className="save-up"> Save up to 50%!</strong>
                 </div>
               </div>
