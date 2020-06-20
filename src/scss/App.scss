@@ -4,17 +4,19 @@
   box-sizing: border-box;
 }
 
-// reset
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
+
+// reset
 a {
   text-decoration: none;
 }
 
 // Font
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@800&display=swap");
 
 // import app components
 @import "./helpers/customeClasses.scss";
 @import "./components/BlackFriday.scss";
+@import "./components/Header.scss";
