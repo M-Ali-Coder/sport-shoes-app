@@ -1,0 +1,59 @@
+.side-menu-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 0;
+  background-color: $black;
+  color: #ffffff;
+  padding: 20px;
+
+  .close-side-menu {
+    font-size: 25px;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+
+  .sidebar-menu-content {
+    & > li {
+      position: relative;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #0e0e0e;
+      padding-bottom: 5px;
+
+      & > a {
+        color: #ffffff;
+        margin-bottom: 10px;
+        display: block;
+        margin-bottom: 10px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      span {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      ul {
+        padding: 0 10px;
+        height: 0;
+        overflow: hidden;
+
+        li {
+          margin-bottom: 10px;
+          border-bottom: 1px solid #0e0e0e;
+          padding-bottom: 10px;
+
+          a {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}
