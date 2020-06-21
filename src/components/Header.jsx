@@ -3,6 +3,7 @@ import { MdSearch } from "react-icons/md";
 import { ReactComponent as PersonIcon } from "../assets/person.svg";
 import { ReactComponent as HeartIcon } from "../assets/heart.svg";
 import { ReactComponent as CartIcon } from "../assets/cart.svg";
+import Navigation from "./Navigation";
 
 const Header = () => {
   return (
@@ -48,7 +49,7 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <div>hello</div>
+          <Navigation />
         </div>
       </div>
     </div>

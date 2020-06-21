@@ -13,10 +13,23 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+}
+
 // Font
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@800&display=swap");
 
-// import app components
+// Helpers
 @import "./helpers/customeClasses.scss";
+@import "./helpers/variables.scss";
+
+// import app components
 @import "./components/BlackFriday.scss";
 @import "./components/Header.scss";
+@import "./components/Navigation.scss";
+
+// React router dom active link style
+.active-link {
+  color: $boldRed !important;
+}

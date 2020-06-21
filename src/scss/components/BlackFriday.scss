@@ -13,7 +13,7 @@
 
     .deal-toolbar-text {
       .save-up {
-        color: #ef3636;
+        color: $boldRed;
       }
     }
     .deal-ends-timer {
@@ -42,13 +42,13 @@
 
         span {
           margin-left: 3px;
-          color: #ef3636;
+          color: $boldRed;
         }
       }
 
       a {
         font-size: 12px;
-        border: 2px solid #ef3636;
+        border: 2px solid $boldRed;
         color: #fff;
         padding: 3px 10px;
         font-weight: bold;

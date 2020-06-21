@@ -1,9 +1,9 @@
 .app-header {
-  border: 1px solid green;
   padding: 30px 0;
 
   .app-header-wrapper {
     display: flex;
+    align-items: center;
 
     .logo {
       display: flex;
@@ -24,6 +24,7 @@
     .parent-header {
       display: flex;
       flex-direction: column;
+      width: 100%;
 
       .main-header-content {
         display: grid;
@@ -45,7 +46,7 @@
             svg {
               margin-right: 12px;
               font-size: 35px;
-              color: #ef3636;
+              color: $boldRed;
             }
 
             input {
@@ -59,7 +60,7 @@
 
             button {
               border: none;
-              background: #ef3636;
+              background: $boldRed;
               color: #fff;
               padding: 10px 30px;
               border-radius: 3px;
@@ -117,7 +118,7 @@
                 position: absolute;
                 top: -17px;
                 right: -7px;
-                background-color: #ef3636;
+                background-color: $boldRed;
                 width: 20px;
                 height: 20px;
                 border-radius: 50%;

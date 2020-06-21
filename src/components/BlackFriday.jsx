@@ -6,7 +6,7 @@ class BlackFriday extends React.Component {
     super(props);
 
     this.state = {
-      isOpen: true,
+      isOpen: false,
       days: 0,
       hours: 0,
       min: 0,
