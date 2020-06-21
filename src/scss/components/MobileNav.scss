@@ -1,0 +1,29 @@
+.mobile-navigation {
+  padding: 10px;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+
+  svg {
+    font-size: 30px;
+  }
+
+  .logo {
+    h1 {
+      font-family: "Poppins", sans-serif;
+    }
+  }
+
+  .cart-info {
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .mobile-navigation {
+    display: flex;
+  }
+}
