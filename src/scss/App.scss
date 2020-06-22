@@ -6,6 +6,7 @@
 
 body {
   font-family: "Open Sans", sans-serif;
+  height: 5000px;
 }
 
 // reset
@@ -23,6 +24,7 @@ ul {
 // Helpers
 @import "./helpers/customeClasses.scss";
 @import "./helpers/variables.scss";
+@import "./helpers/mixin.scss";
 
 // import app components
 @import "./components/BlackFriday.scss";
@@ -30,6 +32,8 @@ ul {
 @import "./components/Navigation.scss";
 @import "./components/MobileNav.scss";
 @import "./components/SideMenu.scss";
+@import "./pages/HomePage.scss";
+@import "./components/Slider.scss";
 
 // React router dom active link style
 .active-link {
