@@ -1,0 +1,87 @@
+.home-page-banner {
+  width: 90%;
+  margin: 0 auto;
+
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .left-banner,
+  .right-banner {
+    max-height: 400px;
+    overflow: hidden;
+    position: relative;
+
+    .banner-content {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .offer-off {
+        @include offer(5px 10px, #f7c162, #000, 70px, 14px);
+        border-radius: 3px;
+        font-weight: bold;
+      }
+
+      .banner-title {
+        font-size: 35px;
+        line-height: 63px;
+        text-transform: uppercase;
+        color: #fff;
+        font-family: "Poppins", sans-serif;
+        margin: 10px 0;
+      }
+
+      .find-your-shoes {
+        @include customeBtn(10px 20px, 150px, #fff, #000);
+        margin-top: 5px;
+        border-radius: 3px;
+        font-weight: bold;
+
+        &:hover {
+          background-color: #fff;
+          color: #000;
+        }
+      }
+    }
+  }
+
+  // .right-banner {
+  //   max-height: 400px;
+  //   overflow: hidden;
+  // }
+}
+
+@media (max-width: 990px) {
+  .home-page-banner {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px;
+
+    .left-banner,
+    .right-banner {
+      .banner-title {
+        font-size: 5vw !important;
+      }
+    }
+  }
+}
+@media (min-width: 991px) {
+  .home-page-banner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 300px;
+
+    .left-banner,
+    .right-banner {
+      .banner-title {
+        font-size: 35px !important;
+      }
+    }
+  }
+}
