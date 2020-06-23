@@ -1,12 +1,27 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { MdRemoveRedEye, MdShuffle } from "react-icons/md";
+import { FaRegHeart } from "react-icons/fa";
 
 const SingleProduct = ({ productName, category, price, description, mainImg, subImages }) => {
   return (
     <div className="feature-product">
       <div className="feature-product-content-wrapper">
         <div className="product-img">
-          <img className="main-image" src={mainImg} alt="main" />
-          <img className="alt-image" src={mainImg} alt="alt" />
+          <Link to="/">
+            <img className="main-image" src={mainImg} alt="main" />
+          </Link>
+          <div className="product-action">
+            <div>
+              <FaRegHeart />
+            </div>
+            <div>
+              <MdShuffle />
+            </div>
+            <div>
+              <MdRemoveRedEye />
+            </div>
+          </div>
         </div>
         <div className="product-category">{category}</div>
         <div className="product-name">{productName}</div>
