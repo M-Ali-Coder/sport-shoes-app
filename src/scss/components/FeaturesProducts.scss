@@ -1,0 +1,44 @@
+.features-products {
+  padding: 30px 0;
+
+  .section-title {
+    text-align: center;
+    font-family: "Barlow Condensed", Sans-serif;
+    text-transform: uppercase;
+    color: #000000;
+    font-size: 35px;
+
+    p {
+      font-size: 14px;
+      color: #7a7a7a;
+    }
+  }
+}
+
+@media (min-width: 1023px) {
+  .features-products {
+    .meet-our-features-products {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .features-products {
+    .meet-our-features-products {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .features-products {
+    .section-title {
+      font-size: 20px !important;
+    }
+  }
+}

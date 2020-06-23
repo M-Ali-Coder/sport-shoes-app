@@ -1,7 +1,7 @@
 import React from "react";
 import "./scss/App.scss";
 import BlackFriday from "./components/BlackFriday";
-// import Header from "./components/Header";
+import Header from "./components/Header";
 import { Switch, Route } from "react-router-dom";
 import HomePage from "./components/pages/HomePage";
 import AboutPage from "./components/pages/AboutPage";
@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <BlackFriday />
-      {/* <Header /> */}
+      <Header />
       <MobileNav />
 
       <Switch>

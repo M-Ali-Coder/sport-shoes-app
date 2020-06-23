@@ -1,6 +1,6 @@
 .home-page-banner {
   width: 90%;
-  margin: 0 auto;
+  margin: 50px auto;
 
   img {
     width: 100%;
@@ -33,7 +33,7 @@
         line-height: 63px;
         text-transform: uppercase;
         color: #fff;
-        font-family: "Poppins", sans-serif;
+        font-family: "Barlow Condensed", Sans-serif;
         margin: 10px 0;
       }
 
@@ -44,8 +44,8 @@
         font-weight: bold;
 
         &:hover {
-          background-color: #fff;
-          color: #000;
+          background-color: #000000;
+          color: #ffffff;
         }
       }
     }
