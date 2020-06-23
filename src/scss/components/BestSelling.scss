@@ -1,0 +1,169 @@
+.best-selling-section {
+  margin: 40px auto;
+
+  .best-selling-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .left-side {
+      position: relative;
+
+      .side-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: "Barlow Condensed", Sans-serif;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        h5 {
+          color: #f9b74a;
+        }
+        h1 {
+          color: #ffffff;
+          text-transform: uppercase;
+          font-size: 50px;
+        }
+        h3 {
+          color: #ffffff;
+          font-size: 25px;
+        }
+      }
+    }
+
+    .right-side {
+      font-family: "Barlow Condensed", Sans-serif;
+      .top-banner {
+        position: relative;
+
+        .banner-content {
+          position: absolute;
+          top: 10%;
+          left: 10%;
+          transform: translate(10%, 10%);
+
+          .offer {
+            @include offer(5px, #ff5740, #fff, 70px, 14px);
+            border-radius: 3px;
+            font-weight: bold;
+            margin-bottom: 10px;
+          }
+          .banner-title {
+            h2 {
+              color: #fff;
+              text-transform: uppercase;
+              font-size: 40px;
+            }
+          }
+          .banner-price {
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 10px;
+
+            .new-price {
+              color: $boldRed;
+              margin-right: 10px;
+            }
+            .old-price {
+              color: #000;
+            }
+          }
+          .shop-now {
+            @include customeBtn(10px, 100px, #fff, #000);
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 15px;
+          }
+        }
+      }
+      .bottom-banner {
+        position: relative;
+
+        .banner-content {
+          position: absolute;
+          top: 10%;
+          right: 10%;
+          transform: translate(10%, 10%);
+
+          .offer {
+            @include offer(5px, #ff5740, #fff, 70px, 14px);
+            border-radius: 3px;
+            font-weight: bold;
+            margin-bottom: 10px;
+          }
+          .banner-title {
+            h2 {
+              color: #fff;
+              text-transform: uppercase;
+              font-size: 40px;
+            }
+          }
+          .banner-price {
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 10px;
+
+            .new-price {
+              color: $boldRed;
+              margin-right: 10px;
+            }
+            .old-price {
+              color: #000;
+            }
+          }
+          .shop-now {
+            @include customeBtn(10px, 100px, #fff, #000);
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 551px) {
+  .best-selling-wrapper {
+    .top-banner,
+    .bottom-banner {
+      height: 350px !important;
+
+      .banner-content {
+        top: 60px !important;
+        left: 60px !important;
+        transform: translate(-35px, -60px) !important;
+        margin: 25px auto !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .best-selling-wrapper {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .best-selling-wrapper {
+    .left-side {
+      .side-content {
+        h5 {
+          font-size: 20px !important;
+        }
+        h1 {
+          font-size: 70px !important;
+        }
+      }
+    }
+  }
+}
