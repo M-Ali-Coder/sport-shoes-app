@@ -1,0 +1,64 @@
+.what-say-about-us {
+  width: 70%;
+  margin: 0 auto;
+
+  .format-quote {
+    text-align: center;
+    font-size: 100px;
+    color: $boldRed;
+  }
+
+  .quote-content {
+    text-align: center;
+    font-family: "Barlow Condensed", Sans-serif;
+    padding: 20px 150px;
+    font-size: 30px;
+
+    p {
+      margin-bottom: 20px;
+    }
+  }
+
+  .swiper-button-prev.swiper-button-disabled,
+  .swiper-button-next.swiper-button-disabled {
+    opacity: 1 !important;
+    cursor: pointer;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    background: transparent;
+    border: 2px solid #000;
+
+    &::after {
+      font-size: 15px !important;
+      color: #000 !important;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .what-say-about-us {
+    width: 90% !important;
+
+    .format-quote {
+      svg {
+        font-size: 0.6em;
+      }
+    }
+
+    .quote-content {
+      p {
+        font-size: 0.6em;
+      }
+      h3 {
+        font-size: 0.8em;
+      }
+    }
+  }
+}
