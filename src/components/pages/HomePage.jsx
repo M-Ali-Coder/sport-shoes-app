@@ -3,6 +3,7 @@ import Slider from "../Slider";
 import HomePageBanner from "../HomePageBanner";
 import FeaturesProducts from "../FeaturesProducts";
 import BestSelling from "../BestSelling";
+import LatestNews from "../LatestNews";
 
 const HomePage = () => {
   return (
@@ -11,6 +12,7 @@ const HomePage = () => {
       <HomePageBanner />
       <FeaturesProducts />
       <BestSelling />
+      <LatestNews />
     </div>
   );
 };

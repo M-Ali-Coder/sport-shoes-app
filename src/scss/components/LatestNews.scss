@@ -1,0 +1,117 @@
+.latest-news-wrapper {
+  .section-title {
+    font-family: "Barlow Condensed", Sans-serif;
+    text-align: center;
+    font-size: 40px;
+
+    h2 {
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    p {
+      color: #888;
+    }
+  }
+
+  .meet-our-latest-blog-news {
+    margin: 60px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+
+    .single-blog-el-wrapper {
+      overflow: hidden;
+
+      .post-thumbnail {
+        position: relative;
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+
+        .post-header-content {
+          position: absolute;
+          right: 35px;
+          left: 35px;
+          bottom: 0;
+          padding: 30px 20px;
+          background-color: #ffffff;
+          text-align: center;
+
+          .categories-link {
+            color: $boldRed;
+            margin-bottom: 10px;
+          }
+          .blog-title {
+            font-family: "Barlow Condensed", Sans-serif;
+            font-weight: bold;
+          }
+        }
+      }
+      .post-meta {
+        font-family: "Barlow Condensed", Sans-serif;
+        margin: 0 36px;
+        background-color: #000;
+        color: #fff;
+        padding: 15px 0;
+        text-align: center;
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+          background-color: $boldRed;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .latest-news-wrapper {
+    margin: 0 auto !important;
+    width: 60% !important;
+
+    .section-title {
+      h2 {
+        font-size: 1em;
+      }
+      p {
+        font-size: 0.5em;
+      }
+    }
+
+    .meet-our-latest-blog-news {
+      grid-template-columns: 1fr !important;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .latest-news-wrapper {
+    width: 90% !important;
+    margin: 0 auto !important;
+
+    .section-title {
+      h2 {
+        font-size: 1em;
+      }
+      p {
+        font-size: 0.5em;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .latest-news-wrapper {
+    width: 90% !important;
+    margin: 60px auto !important;
+
+    .section-title {
+      p {
+        font-size: 0.6em;
+      }
+    }
+  }
+}
