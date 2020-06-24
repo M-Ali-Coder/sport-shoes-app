@@ -18,11 +18,12 @@
         position: absolute;
         top: 50%;
         left: 50%;
+        right: 0;
         transform: translate(-50%, -50%);
         font-family: "Barlow Condensed", Sans-serif;
-        display: flex;
-        flex-direction: column;
+        font-size: 50px;
         text-align: center;
+        width: 100%;
 
         h5 {
           color: #f9b74a;
@@ -30,11 +31,9 @@
         h1 {
           color: #ffffff;
           text-transform: uppercase;
-          font-size: 50px;
         }
         h3 {
           color: #ffffff;
-          font-size: 25px;
         }
       }
     }
@@ -47,8 +46,12 @@
         .banner-content {
           position: absolute;
           top: 10%;
-          left: 10%;
-          transform: translate(10%, 10%);
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          padding-left: 30px;
+          font-size: 50px;
 
           .offer {
             @include offer(5px, #ff5740, #fff, 70px, 14px);
@@ -57,10 +60,12 @@
             margin-bottom: 10px;
           }
           .banner-title {
+            font-size: 0.5em;
+
             h2 {
               color: #fff;
               text-transform: uppercase;
-              font-size: 40px;
+              font-size: 1em;
             }
           }
           .banner-price {
@@ -90,8 +95,12 @@
         .banner-content {
           position: absolute;
           top: 10%;
-          right: 10%;
-          transform: translate(10%, 10%);
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          padding-left: 30px;
+          font-size: 50px;
 
           .offer {
             @include offer(5px, #ff5740, #fff, 70px, 14px);
@@ -100,10 +109,11 @@
             margin-bottom: 10px;
           }
           .banner-title {
+            font-size: 0.5em;
             h2 {
               color: #fff;
               text-transform: uppercase;
-              font-size: 40px;
+              font-size: 1em;
             }
           }
           .banner-price {
@@ -131,17 +141,29 @@
   }
 }
 
+//  NEW MEDIA RIGHT HERE
+
 @media (max-width: 551px) {
   .best-selling-wrapper {
-    .top-banner,
-    .bottom-banner {
-      height: 350px !important;
+    .left-side {
+      .side-content {
+        h5 {
+          font-size: 0.3em;
+        }
+        h1 {
+          font-size: 0.8em;
+          margin: 10px 0;
+        }
+        h3 {
+          font-size: 0.5em;
+        }
+      }
+    }
 
-      .banner-content {
-        top: 60px !important;
-        left: 60px !important;
-        transform: translate(-35px, -60px) !important;
-        margin: 25px auto !important;
+    .right-side {
+      .top-banner,
+      .bottom-banner {
+        height: 300px;
       }
     }
   }
@@ -150,18 +172,82 @@
 @media (max-width: 767px) {
   .best-selling-wrapper {
     grid-template-columns: 1fr !important;
+
+    .right-side {
+      .top-banner,
+      .bottom-banner {
+        .banner-content {
+          .banner-title {
+            font-size: 0.8em !important;
+          }
+        }
+      }
+    }
   }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 991px) {
   .best-selling-wrapper {
     .left-side {
       .side-content {
         h5 {
-          font-size: 20px !important;
+          font-size: 0.3em;
         }
         h1 {
-          font-size: 70px !important;
+          font-size: 0.8em;
+          margin: 10px 0;
+        }
+        h3 {
+          font-size: 0.5em;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .best-selling-wrapper {
+    .left-side {
+      .side-content {
+        h5 {
+          font-size: 0.3em;
+        }
+        h1 {
+          font-size: 0.8em;
+          margin: 10px 0;
+        }
+        h3 {
+          font-size: 0.5em;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .best-selling-wrapper {
+    .left-side {
+      .side-content {
+        h5 {
+          font-size: 0.5em;
+        }
+        h1 {
+          font-size: 2em;
+          margin: 10px 0;
+        }
+        h3 {
+          font-size: 0.8em;
+        }
+      }
+    }
+
+    .right-side {
+      .top-banner,
+      .bottom-banner {
+        .banner-content {
+          .banner-title {
+            font-size: 1em !important;
+          }
         }
       }
     }
