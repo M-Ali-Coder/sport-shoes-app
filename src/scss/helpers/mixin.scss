@@ -1,3 +1,40 @@
+// Margin mixin
+$maxNum: 100;
+
+@for $i from 1 through $maxNum {
+  .mr-#{$i} {
+    margin: $i + px;
+  }
+}
+
+// Margin top
+@for $i from 1 through $maxNum {
+  .mr-top-#{$i} {
+    margin-top: $i + px;
+  }
+}
+
+// Margin right
+@for $i from 1 through $maxNum {
+  .mr-right-#{$i} {
+    margin-right: $i + px;
+  }
+}
+
+// Margin bottom
+@for $i from 1 through $maxNum {
+  .mr-bottom-#{$i} {
+    margin-bottom: $i + px;
+  }
+}
+
+// Margin left
+@for $i from 1 through $maxNum {
+  .mr-left-#{$i} {
+    margin-left: $i + px;
+  }
+}
+
 @mixin customeBtn($padding, $width, $bg, $color) {
   padding: $padding;
   width: $width;

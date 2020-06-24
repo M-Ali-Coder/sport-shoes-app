@@ -6,6 +6,7 @@ import { Switch, Route } from "react-router-dom";
 import HomePage from "./components/pages/HomePage";
 import AboutPage from "./components/pages/AboutPage";
 import MobileNav from "./components/MobileNav";
+import AppFooter from "./components/AppFooter";
 
 function App() {
   return (
@@ -13,11 +14,11 @@ function App() {
       <BlackFriday />
       <Header />
       <MobileNav />
-
       <Switch>
         <Route exact path="/" render={() => <HomePage />} />
         <Route path="/about" render={() => <AboutPage />} />
       </Switch>
+      <AppFooter />
     </div>
   );
 }
