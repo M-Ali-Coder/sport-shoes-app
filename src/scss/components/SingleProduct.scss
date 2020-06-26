@@ -86,3 +86,35 @@
     }
   }
 }
+
+.modal-content {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 30px;
+
+  .modal-left-side {
+    text-align: center;
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .modal-right-side {
+    font-family: "Barlow Condensed", Sans-serif;
+
+    .buy-product {
+      button {
+        all: unset;
+        margin-top: 30px;
+        text-align: center;
+        border-radius: 3px;
+        @include customeBtn(10px, 100px, $boldRed, #fff);
+        font-weight: bold;
+      }
+    }
+  }
+}

@@ -20,9 +20,7 @@ class Navigation extends React.Component {
       <div className="app-navigation-bar">
         <ul>
           <li>
-            <NavLink to="/" activeClassName="active-link">
-              Home
-            </NavLink>
+            <NavLink to="/">Home</NavLink>
           </li>
           <li
             className="shop-menu-wrapper"
