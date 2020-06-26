@@ -1,0 +1,220 @@
+.about-page-wrapper {
+  .our-story-wrapper {
+    font-family: "Barlow Condensed", Sans-serif;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 30px;
+    overflow: hidden;
+
+    .our-story-image {
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .our-story-content {
+      font-size: 30px;
+
+      h2 {
+        margin-bottom: 15px;
+      }
+
+      p {
+        color: #626262;
+      }
+
+      .our-story-quote {
+        margin-top: 30px;
+        padding: 0 20px;
+
+        p {
+          color: #000;
+          font-weight: 500;
+          font-size: 25px;
+          line-height: 40px;
+          padding: 0 60px;
+
+          &::before {
+            content: "";
+          }
+        }
+
+        svg {
+          color: #fed700;
+          font-size: 40px;
+        }
+
+        .author-name {
+          font-size: 14px;
+          font-weight: bold;
+        }
+
+        .author-job {
+          font-size: 14px;
+          color: #626262;
+        }
+      }
+    }
+  }
+
+  .why-choose-us {
+    padding: 70px 0;
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 30px;
+
+      .column {
+        font-family: "Barlow Condensed", Sans-serif;
+        background-color: #fff;
+        padding: 30px;
+
+        svg {
+          color: #fe6e44;
+          font-size: 50px;
+          margin-bottom: 20px;
+        }
+
+        h2 {
+          font-size: 20px;
+          margin-bottom: 10px;
+        }
+
+        p {
+          color: #7a7a7a;
+        }
+      }
+    }
+  }
+
+  .meet-out-team {
+    font-family: "Barlow Condensed", Sans-serif;
+    padding: 70px 0;
+
+    .row {
+      width: 90%;
+      margin: 30px auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 30px;
+
+      .column {
+        text-align: center;
+
+        .teammate-info {
+          margin: 10px 0;
+          text-transform: uppercase;
+          .teammate-name {
+            color: #000;
+            font-weight: 600;
+            font-size: 18px;
+          }
+          .teammate-job {
+            color: #7a7a7a;
+          }
+        }
+        .follow-teammate {
+          width: 50%;
+          margin: 0 auto 30px auto;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+
+          a {
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            border: 1px solid #ebebeb;
+
+            &:hover {
+              border: 1px solid $boldRed;
+
+              svg {
+                color: $boldRed;
+              }
+            }
+
+            svg {
+              color: #626262;
+              font-size: 12px;
+            }
+          }
+        }
+
+        .teammate-description {
+          color: #626262;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-page-wrapper {
+    .our-story-wrapper {
+      .our-story-content {
+        h2 {
+          font-size: 1em;
+        }
+
+        p {
+          font-size: 0.5em;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .about-page-wrapper {
+    .our-story-wrapper {
+      .our-story-content {
+        h2 {
+          font-size: 1em;
+        }
+
+        p {
+          font-size: 0.5em;
+        }
+      }
+    }
+    .meet-out-team {
+      .row {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .about-page-wrapper {
+    .why-choose-us {
+      .row {
+        grid-template-columns: 1fr !important;
+        .column {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 551px) {
+  .about-page-wrapper {
+    .meet-out-team {
+      .row {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  }
+}

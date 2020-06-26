@@ -1,0 +1,16 @@
+.our-brands-wrapper {
+  .row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    // grid-gap: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .our-brands-wrapper {
+    display: none;
+  }
+}

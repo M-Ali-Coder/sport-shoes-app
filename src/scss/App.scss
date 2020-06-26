@@ -33,7 +33,6 @@ ul {
 @import "./components/Navigation.scss";
 @import "./components/MobileNav.scss";
 @import "./components/SideMenu.scss";
-@import "./pages/HomePage.scss";
 @import "./components/Slider.scss";
 @import "./components/HomePageBanner.scss";
 @import "./components/FeaturesProducts.scss";
@@ -42,6 +41,12 @@ ul {
 @import "./components/LatestNews.scss";
 @import "./components/SayAboutUs.scss";
 @import "./components/AppFooter.scss";
+@import "./components/AppPageBanner.scss";
+@import "./components/OurBrands.scss";
+
+// App pages
+@import "./pages/HomePage.scss";
+@import "./pages/AboutPage.scss";
 
 // React router dom active link style
 .active-link {
