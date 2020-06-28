@@ -6,7 +6,7 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  // height: 10000px;
+  height: 10000px;
   background-color: #f6f6f6;
 }
 
@@ -48,6 +48,7 @@ ul {
 // App pages
 @import "./pages/HomePage.scss";
 @import "./pages/AboutPage.scss";
+@import "./pages/UserAccount.scss";
 
 // React router dom active link style
 .active-link {
