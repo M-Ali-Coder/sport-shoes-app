@@ -1,0 +1,116 @@
+.product-modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.72);
+
+  .product-modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 90vh;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    .product-image-wrapper {
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .about-product {
+      padding: 30px;
+      font-size: 40px;
+      position: relative;
+
+      h1 {
+        font-family: "Barlow Condensed", Sans-serif;
+        font-size: 1em;
+        color: #000;
+        font-weight: 500;
+      }
+
+      .description {
+        font-size: 0.4em;
+        color: #888;
+        line-height: 23px;
+      }
+
+      .product-price {
+        color: $boldRed;
+        font-size: 0.7em;
+        font-weight: bold;
+      }
+
+      .product-count-to-order {
+        input[type="number"] {
+          all: unset;
+          border: 1px solid #88888896;
+          font-size: 15px;
+          width: 100px;
+          padding: 10px 5px;
+        }
+      }
+
+      .product-category {
+        margin-top: 20px;
+
+        div {
+          font-size: 0.4em;
+          text-transform: uppercase;
+
+          span {
+            font-weight: bold;
+          }
+        }
+      }
+
+      .add-product-to-cart {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+        background-color: #ef3636;
+        color: #fff;
+        padding: 10px 0;
+        font-size: 0.5em;
+
+        button {
+          all: unset;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .close-modal {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    background-color: #000;
+    cursor: pointer;
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .product-modal-wrapper {
+    .product-modal-content {
+      width: 95% !important;
+    }
+  }
+}

@@ -4,13 +4,16 @@ import { ReactComponent as PersonIcon } from "../assets/person.svg";
 import { ReactComponent as HeartIcon } from "../assets/heart.svg";
 import { ReactComponent as CartIcon } from "../assets/cart.svg";
 import Navigation from "./Navigation";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <div className="app-header">
       <div className="container app-header-wrapper">
         <div className="logo">
-          <h1>ekommart</h1>
+          <Link to="/">
+            <h1>ekommart</h1>
+          </Link>
         </div>
         <div className="parent-header">
           <div className="main-header-content">
@@ -36,7 +39,9 @@ const Header = () => {
 
               <div className="user-icon">
                 <div>
-                  <PersonIcon />
+                  <Link to="/my-accoutn">
+                    <PersonIcon />
+                  </Link>
                 </div>
                 <div>
                   <HeartIcon />
