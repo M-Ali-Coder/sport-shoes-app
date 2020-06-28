@@ -2,12 +2,13 @@ import React from "react";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebookF, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { signInWithGoogle } from "../../firebase/firebase.util";
 
-const UserAccount = () => {
+const UserSignIn = () => {
   return (
     <div className="container user-account-page-wrapper">
       <div className="other-methods-to-sign">
-        <button className="sign-in-with-google">
+        <button className="sign-in-with-google" onClick={signInWithGoogle}>
           <div className="icon-wrapper">
             <FcGoogle />
           </div>
@@ -47,4 +48,4 @@ const UserAccount = () => {
   );
 };
 
-export default UserAccount;
+export default UserSignIn;

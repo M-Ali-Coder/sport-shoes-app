@@ -6,8 +6,9 @@ import { Switch, Route } from "react-router-dom";
 import HomePage from "./components/pages/HomePage";
 import AboutPage from "./components/pages/AboutPage";
 import MobileNav from "./components/MobileNav";
-import AppFooter from "./components/AppFooter";
-import UserAccount from "./components/pages/UserAccount";
+import UserSignIn from "./components/pages/UserSignIn";
+import UserCreateAccount from "./components/pages/UserCreateAccount";
+// import AppFooter from "./components/AppFooter";
 
 function App() {
   return (
@@ -18,9 +19,10 @@ function App() {
       <Switch>
         <Route exact path="/" render={() => <HomePage />} />
         <Route path="/about" render={() => <AboutPage />} />
-        <Route path="/sign-in" render={() => <UserAccount />} />
+        <Route path="/sign-in" render={() => <UserSignIn />} />
+        <Route path="/create-account" render={() => <UserCreateAccount />} />
       </Switch>
-      <AppFooter />
+      {/* <AppFooter /> */}
     </div>
   );
 }
