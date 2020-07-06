@@ -1,72 +1,71 @@
-.create-acccount-form {
-  width: 70%;
-  margin: 100px auto;
+.create-an-account {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  width: 80%;
+  margin: 40px auto;
 
-  h4 {
-    margin-bottom: 25px;
-    text-transform: uppercase;
-  }
-
-  input[type="text"],
-  input[type="password"] {
+  form {
     width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background: #f1f1f1;
   }
 
-  input[type="text"]:focus,
-  input[type="password"]:focus {
-    background-color: #ddd;
-    outline: none;
+  .input-field {
+    position: relative;
+    width: 250px;
+    height: 44px;
+    line-height: 44px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #000;
+    transition: 0.2s all;
+    cursor: text;
+  }
+  input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid #979797;
+    box-shadow: none;
+    color: #111;
+    background-color: transparent;
+  }
+  input:invalid {
+    outline: 0;
+    // color: #ff2300;
+    //   border-color: #ff2300;
+  }
+  input:focus,
+  input:valid {
+    border-color: #979797;
+  }
+  input:focus ~ label,
+  input:valid ~ label {
+    font-size: 14px;
+    top: -24px;
+    color: #979797;
   }
 
-  /* Overwrite default styles of hr */
-  hr {
-    border: 1px solid #f1f1f1;
-    margin-bottom: 25px;
-  }
-
-  /* Set a style for the submit/register button */
-  .registerbtn {
-    background-color: #4caf50;
+  .submit-btn {
+    background-color: #ef3636;
     color: white;
-    padding: 16px 20px;
+    padding: 14px 20px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
-    opacity: 0.9;
-  }
-
-  .registerbtn:hover {
-    opacity: 1;
-  }
-
-  /* Add a blue text color to links */
-  a {
-    color: dodgerblue;
-  }
-
-  /* Set a grey background color and center the text of the "sign in" section */
-  .signin {
-    background-color: $boldRed;
+    max-width: 300px;
     text-align: center;
-    width: 100%;
-    padding: 15px 0;
-    cursor: pointer;
-
-    a {
-      color: #fff;
-      text-decoration: underline;
-    }
+    border-radius: 3px;
   }
-}
 
-@media (max-width: 992px) {
-  .create-acccount-form {
-    width: 90% !important;
+  .create-acccount {
+    color: #ef3636;
+    margin-top: 10px;
   }
 }

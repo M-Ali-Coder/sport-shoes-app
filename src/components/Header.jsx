@@ -39,7 +39,7 @@ const Header = () => {
 
               <div className="user-icon">
                 <div>
-                  <Link to="/sign-in">
+                  <Link to="/user/signin">
                     <PersonIcon />
                   </Link>
                 </div>

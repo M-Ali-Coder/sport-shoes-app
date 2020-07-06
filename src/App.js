@@ -8,23 +8,56 @@ import AboutPage from "./components/pages/AboutPage";
 import MobileNav from "./components/MobileNav";
 import UserSignIn from "./components/pages/UserSignIn";
 import UserCreateAccount from "./components/pages/UserCreateAccount";
-// import AppFooter from "./components/AppFooter";
+import AppFooter from "./components/AppFooter";
+import { auth, createUserProfileDoc } from "./firebase/firebase.util";
 
-function App() {
-  return (
-    <div className="App">
-      <BlackFriday />
-      <Header />
-      <MobileNav />
-      <Switch>
-        <Route exact path="/" render={() => <HomePage />} />
-        <Route path="/about" render={() => <AboutPage />} />
-        <Route path="/sign-in" render={() => <UserSignIn />} />
-        <Route path="/create-account" render={() => <UserCreateAccount />} />
-      </Switch>
-      {/* <AppFooter /> */}
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      currentUser: null,
+    };
+  }
+
+  unSubscribeFromAuth = null;
+
+  componentDidMount() {
+    this.unSubscribeFromAuth = auth.onAuthStateChanged(async (user) => {
+      createUserProfileDoc(user);
+
+      this.setState({
+        currentUser: user,
+      });
+    });
+  }
+
+  componentWillUnmount() {
+    this.unSubscribeFromAuth();
+  }
+
+  render() {
+    const { currentUser } = this.state;
+
+    return (
+      <div className="App">
+        <BlackFriday />
+        <Header />
+        <MobileNav />
+        <Switch>
+          <Route exact path="/" render={() => <HomePage />} />
+          <Route path="/about" render={() => <AboutPage />} />
+          <Route
+            exact
+            path="/user/signin"
+            render={() => <UserSignIn currentUser={currentUser} />}
+          />
+          <Route path="/user/create-account" render={() => <UserCreateAccount />} />
+        </Switch>
+        <AppFooter />
+      </div>
+    );
+  }
 }
 
 export default App;
