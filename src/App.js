@@ -2,7 +2,7 @@ import React from "react";
 import "./scss/App.scss";
 import BlackFriday from "./components/BlackFriday";
 import Header from "./components/Header";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import HomePage from "./components/pages/HomePage";
 import AboutPage from "./components/pages/AboutPage";
 import MobileNav from "./components/MobileNav";
@@ -10,34 +10,27 @@ import UserSignIn from "./components/pages/UserSignIn";
 import UserCreateAccount from "./components/pages/UserCreateAccount";
 import AppFooter from "./components/AppFooter";
 import { auth, createUserProfileDoc } from "./firebase/firebase.util";
+import { connect } from "react-redux";
+import { setCurrentUser } from "./redux/user/user.action";
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      currentUser: null,
-    };
-  }
-
   unSubscribeFromAuth = null;
 
   componentDidMount() {
+    const { setCurrentUser } = this.props;
+
     this.unSubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
       if (userAuth) {
         const userRef = await createUserProfileDoc(userAuth);
 
         userRef.onSnapshot((snapShot) => {
-          this.setState({
+          setCurrentUser({
             id: snapShot.id,
             ...snapShot.data(),
           });
         });
-      } else {
-        this.setState({
-          currentUser: userAuth,
-        });
       }
+      setCurrentUser(userAuth);
     });
   }
 
@@ -46,7 +39,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { currentUser } = this.state;
+    const { currentUser } = this.props;
 
     return (
       <div className="App">
@@ -59,7 +52,7 @@ class App extends React.Component {
           <Route
             exact
             path="/user/signin"
-            render={() => <UserSignIn currentUser={currentUser} />}
+            render={() => (currentUser ? <Redirect to="/" /> : <UserSignIn />)}
           />
           <Route path="/user/create-account" render={() => <UserCreateAccount />} />
         </Switch>
@@ -69,4 +62,12 @@ class App extends React.Component {
   }
 }
 
-export default App;
+const mapStateToProps = ({ user }) => ({
+  currentUser: user.currentUser,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  setCurrentUser: (user) => dispatch(setCurrentUser(user)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

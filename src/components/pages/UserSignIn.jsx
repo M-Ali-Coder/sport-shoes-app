@@ -4,6 +4,7 @@ import { FaFacebookF, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { signInWithGoogle } from "../../firebase/firebase.util";
 import { auth } from "../../firebase/firebase.util";
+import { connect } from "react-redux";
 
 const UserSignIn = ({ currentUser }) => {
   return (
@@ -60,4 +61,8 @@ const UserSignIn = ({ currentUser }) => {
   );
 };
 
-export default UserSignIn;
+const mapStateToProps = (state) => ({
+  currentUser: state.user.currentUser,
+});
+
+export default connect(mapStateToProps)(UserSignIn);
