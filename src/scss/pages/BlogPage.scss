@@ -1,0 +1,128 @@
+.blog-page-wrapper {
+  .page-content-wrapper {
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    gap: 30px;
+
+    .our-blog-posts {
+      .latest-blog-post-wrapper {
+        .blog-image {
+          margin-bottom: 20px;
+
+          img {
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .posted-date {
+          font-size: 0.6rem;
+          font-weight: 600;
+        }
+
+        .post-title {
+          margin-bottom: 20px;
+
+          a {
+            color: #000;
+            font-size: 1rem;
+          }
+        }
+
+        .post-description {
+          font-size: 0.7rem;
+          margin-bottom: 10px;
+
+          p {
+            color: #626262;
+            line-height: 1.5;
+          }
+        }
+
+        .read-more {
+          text-transform: capitalize;
+          font-size: 0.8rem;
+          margin-bottom: 20px;
+
+          a {
+            color: $boldRed;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    .latest-blog-side {
+      padding: 0 15px 15px 15px;
+
+      .column {
+        margin-bottom: 15px;
+
+        h4 {
+          border-bottom: 1px solid #ebebeb;
+          padding-bottom: 10px;
+          margin-bottom: 10px;
+        }
+
+        .item {
+          display: flex;
+          &:not(:last-of-type) {
+            border-bottom: 1px solid #ebebeb;
+          }
+          padding: 15px 0;
+
+          .blog-image {
+            margin-right: 10px;
+
+            img {
+              display: block;
+              width: 100px;
+              height: 90px;
+            }
+          }
+
+          .post-info {
+            display: flex;
+            flex-direction: column;
+
+            p {
+              margin-top: 10px;
+              font-size: 0.7rem;
+            }
+          }
+        }
+
+        .tags-items {
+          margin-top: 20px;
+
+          span {
+            background: #eef2f8;
+            font-size: 12px;
+            padding: 10px;
+            margin-right: 10px;
+            transition: all 0.4s ease-in-out;
+            cursor: pointer;
+
+            &:hover {
+              background-color: $boldRed;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 1024px) {
+  .blog-page-wrapper {
+    .page-content-wrapper {
+      grid-template-columns: 1fr !important;
+
+      .latest-blog-side {
+        display: none;
+      }
+    }
+  }
+}

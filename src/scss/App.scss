@@ -1,3 +1,6 @@
+// App font
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -9,9 +12,8 @@
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
-  height: 10000px;
-  // background-color: #f6f6f6;
+  font-family: "Poppins", sans-serif;
+  // height: 10000px;
 }
 
 // reset
@@ -22,9 +24,6 @@ a {
 ul {
   list-style: none;
 }
-
-// Font
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap");
 
 // Helpers
 @import "./helpers/customeClasses.scss";
@@ -55,6 +54,7 @@ ul {
 @import "./pages/UserAccount.scss";
 @import "./pages/UserCreateAccount.scss";
 @import "./pages/ShopPage.scss";
+@import "./pages/BlogPage.scss";
 
 // React router dom active link style
 .active-link {
