@@ -8,10 +8,11 @@ import AboutPage from "./components/pages/AboutPage";
 import MobileNav from "./components/MobileNav";
 import UserSignIn from "./components/pages/UserSignIn";
 import UserCreateAccount from "./components/pages/UserCreateAccount";
-import AppFooter from "./components/AppFooter";
+// import AppFooter from "./components/AppFooter";
 import { auth, createUserProfileDoc } from "./firebase/firebase.util";
 import { connect } from "react-redux";
 import { setCurrentUser } from "./redux/user/user.action";
+import ShopPage from "./components/pages/ShopPage";
 
 class App extends React.Component {
   unSubscribeFromAuth = null;
@@ -49,6 +50,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/" render={() => <HomePage />} />
           <Route path="/about" render={() => <AboutPage />} />
+          <Route path="/shop" render={() => <ShopPage />} />
           <Route
             exact
             path="/user/signin"
@@ -56,7 +58,7 @@ class App extends React.Component {
           />
           <Route path="/user/create-account" render={() => <UserCreateAccount />} />
         </Switch>
-        <AppFooter />
+        {/* <AppFooter /> */}
       </div>
     );
   }

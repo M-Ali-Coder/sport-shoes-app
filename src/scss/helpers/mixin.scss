@@ -35,6 +35,44 @@ $maxNum: 100;
   }
 }
 
+// Margin mixin
+$maxNum: 100;
+
+@for $i from 1 through $maxNum {
+  .pd-#{$i} {
+    padding: $i + px;
+  }
+}
+
+// Margin top
+@for $i from 1 through $maxNum {
+  .pd-top-#{$i} {
+    padding-top: $i + px;
+  }
+}
+
+// Margin right
+@for $i from 1 through $maxNum {
+  .pd-right-#{$i} {
+    padding-right: $i + px;
+  }
+}
+
+// Margin bottom
+@for $i from 1 through $maxNum {
+  .pd-bottom-#{$i} {
+    padding-bottom: $i + px;
+  }
+}
+
+// Margin left
+@for $i from 1 through $maxNum {
+  .pd-left-#{$i} {
+    padding-left: $i + px;
+  }
+}
+
+//  Mixins
 @mixin customeBtn($padding, $width, $bg, $color) {
   padding: $padding;
   width: $width;
