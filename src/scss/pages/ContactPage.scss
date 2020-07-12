@@ -1,0 +1,65 @@
+.contact-page-wrapper {
+  input[type="text"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    outline: none;
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 50px;
+
+    .column {
+      margin-top: 6px;
+
+      input[type="submit"] {
+        background-color: $boldRed;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        cursor: pointer;
+        font-weight: 600;
+      }
+
+      .our-team-members {
+        font-size: 0.6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-bottom: 20px;
+          text-align: center;
+
+          img {
+            display: block;
+            width: 60px;
+            height: 60px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  label {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: $breakpoint-md) {
+  .contact-page-wrapper {
+    .row {
+      grid-template-columns: 1fr !important;
+    }
+  }
+}

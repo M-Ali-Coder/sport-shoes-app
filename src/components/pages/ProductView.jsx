@@ -21,7 +21,7 @@ class ProductView extends React.Component {
     const currentProduct = products.filter(
       ({ productName }) => productName.toLowerCase().replace(/ /g, "-") === productParam
     );
-    const { description, mainImg, price, productName, category } = currentProduct[0];
+    const { description, mainImg, price, productName } = currentProduct[0];
 
     return (
       <div className="product-view-page-wrapper">

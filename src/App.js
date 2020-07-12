@@ -16,6 +16,7 @@ import ShopPage from "./components/pages/ShopPage";
 import BlogPage from "./components/pages/BlogPage";
 import ProductView from "./components/pages/ProductView";
 import FEATURES_PRODUCTS from "./data/featuresProducts";
+import ContactPage from "./components/pages/ContactPage";
 
 class App extends React.Component {
   unSubscribeFromAuth = null;
@@ -54,6 +55,7 @@ class App extends React.Component {
           <Route exact path="/" render={() => <HomePage />} />
           <Route path="/about" render={() => <AboutPage />} />
           <Route exact path="/shop" render={() => <ShopPage />} />
+          <Route path="/contact" render={() => <ContactPage />} />
           <Route
             exact
             path="/shop/:productParam"
