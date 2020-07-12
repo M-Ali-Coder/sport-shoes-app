@@ -12,6 +12,10 @@ class BlogPage extends React.Component {
     };
   }
 
+  componentDidMount() {
+    document.title = "Ekommart | Blog  page";
+  }
+
   render() {
     const { posts } = this.state;
 

@@ -12,6 +12,10 @@ class CartPage extends React.Component {
     };
   }
 
+  componentDidMount() {
+    document.title = "Ekommart | Cart page";
+  }
+
   render() {
     const { quantity } = this.state;
 

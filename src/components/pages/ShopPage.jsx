@@ -14,6 +14,10 @@ class ShopPage extends React.Component {
     };
   }
 
+  componentDidMount() {
+    document.title = "Ekommart | Shop page";
+  }
+
   showSideBar() {
     const showSideBar = document.getElementById("filter-side-bar");
     const sideBar = document.getElementById("hide-side-bar");

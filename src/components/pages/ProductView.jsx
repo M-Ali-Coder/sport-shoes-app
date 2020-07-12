@@ -14,6 +14,10 @@ class ProductView extends React.Component {
     };
   }
 
+  componentDidMount() {
+    document.title = `Ekommart | ${this.props.match.params.productParam.replace(/-/g, " ")}`;
+  }
+
   render() {
     const { activeTab, relatedProducts } = this.state;
     const { match, products } = this.props;

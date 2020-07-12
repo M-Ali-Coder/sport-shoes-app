@@ -14,6 +14,10 @@ class UserCreateAccount extends React.Component {
     };
   }
 
+  componentDidMount() {
+    document.title = "Ekommart | Create an account";
+  }
+
   handleSubmit = async (e) => {
     e.preventDefault();
 

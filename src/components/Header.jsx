@@ -5,7 +5,6 @@ import { ReactComponent as HeartIcon } from "../assets/heart.svg";
 import { ReactComponent as CartIcon } from "../assets/cart.svg";
 import Navigation from "./Navigation";
 import { Link } from "react-router-dom";
-import { auth } from "../firebase/firebase.util";
 
 const Header = () => {
   return (
@@ -33,8 +32,8 @@ const Header = () => {
                 </div>
                 <div className="vertical-line" />
                 <div className="right-side">
-                  <span>register</span>
-                  <span onClick={() => auth.signOut()}>logout</span>
+                  <p>FREE SHIPPING</p>
+                  <p>ON ORDERS OVER $150.0</p>
                 </div>
               </div>
 
@@ -44,10 +43,10 @@ const Header = () => {
                     <PersonIcon />
                   </Link>
                 </div>
-                <div>
+                <Link to="/wishlist">
                   <HeartIcon />
                   <span className="wishlist-count">0</span>
-                </div>
+                </Link>
                 <div>
                   <CartIcon />
                   <span className="shopping-cart-count">0</span>

@@ -83,6 +83,8 @@
 
             .left-side,
             .right-side {
+              font-size: 0.7rem;
+              font-weight: 600;
               h5 {
                 font-weight: bold;
               }
@@ -113,6 +115,7 @@
               cursor: pointer;
             }
 
+            a,
             div {
               position: relative;
 

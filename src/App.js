@@ -19,6 +19,7 @@ import FEATURES_PRODUCTS from "./data/featuresProducts";
 import ContactPage from "./components/pages/ContactPage";
 import CartPage from "./components/pages/CartPage";
 import WishlistPage from "./components/pages/WishlistPage";
+import CheckoutPage from "./components/pages/CheckoutPage";
 
 class App extends React.Component {
   unSubscribeFromAuth = null;
@@ -60,6 +61,7 @@ class App extends React.Component {
           <Route path="/contact" render={() => <ContactPage />} />
           <Route path="/cart" render={() => <CartPage />} />
           <Route path="/wishlist" render={() => <WishlistPage />} />
+          <Route path="/checkout" render={() => <CheckoutPage />} />
           <Route
             exact
             path="/shop/:productParam"

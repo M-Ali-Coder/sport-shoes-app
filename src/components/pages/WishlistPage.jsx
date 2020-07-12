@@ -12,6 +12,10 @@ class WishlistPage extends React.Component {
     };
   }
 
+  componentDidMount() {
+    document.title = "Ekommart | Wishlist page";
+  }
+
   render() {
     const { quantity } = this.state;
 

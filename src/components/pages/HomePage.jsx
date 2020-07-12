@@ -6,17 +6,23 @@ import BestSelling from "../BestSelling";
 import LatestNews from "../LatestNews";
 import SayAboutUs from "../SayAboutUs";
 
-const HomePage = () => {
-  return (
-    <div className="home-page">
-      <Slider />
-      <HomePageBanner />
-      <FeaturesProducts />
-      <BestSelling />
-      <LatestNews />
-      <SayAboutUs />
-    </div>
-  );
-};
+class HomePage extends React.Component {
+  componentDidMount() {
+    document.title = "Ekommart | Home page";
+  }
+
+  render() {
+    return (
+      <div className="home-page">
+        <Slider />
+        <HomePageBanner />
+        <FeaturesProducts />
+        <BestSelling />
+        <LatestNews />
+        <SayAboutUs />
+      </div>
+    );
+  }
+}
 
 export default HomePage;
