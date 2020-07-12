@@ -3,7 +3,7 @@ import Product from "../../assets/images/product-5.jpg";
 import { Link } from "react-router-dom";
 import AppPageBanner from "../AppPageBanner";
 
-class CartPage extends React.Component {
+class WishlistPage extends React.Component {
   constructor(props) {
     super(props);
 
@@ -17,7 +17,7 @@ class CartPage extends React.Component {
 
     return (
       <div className="cart-page-wrapper font">
-        <AppPageBanner title="Cart" />
+        <AppPageBanner title="Wishlist" />
         <div className="container">
           <div className="cart-page-content">
             <h3>
@@ -66,40 +66,10 @@ class CartPage extends React.Component {
               </tbody>
             </table>
           </div>
-
-          <div className="proceed-to-checkout">
-            <ul className="proceed-to-checkout-list">
-              <li>
-                <span>Subtotal:</span>
-                <span>$396.00</span>
-              </li>
-              <li>
-                <span>Shipping:</span>
-                <Link to="#">Add Info</Link>
-              </li>
-              <li>
-                <span>Tax:</span>
-                <span>$39.60</span>
-              </li>
-              <li>
-                <span>Coupon Code:</span>
-                <Link to="#">Add Coupon</Link>
-              </li>
-              <li>
-                <span>Gift Certificate:</span>
-                <Link to="#">Gift Certificate</Link>
-              </li>
-              <li>
-                <span>Grand total:</span>
-                <span>$435.60</span>
-              </li>
-            </ul>
-            <button>proceed to checkout</button>
-          </div>
         </div>
       </div>
     );
   }
 }
 
-export default CartPage;
+export default WishlistPage;
