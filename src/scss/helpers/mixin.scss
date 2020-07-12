@@ -82,6 +82,7 @@ $maxNum: 100;
   outline: none;
   cursor: pointer;
   transition: all 0.4s ease-in-out;
+  text-align: center;
 }
 
 @mixin offer($padding, $bg, $color, $width, $fSize) {

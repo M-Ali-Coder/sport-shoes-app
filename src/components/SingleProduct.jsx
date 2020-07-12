@@ -6,6 +6,7 @@ import ProductModal from "../scss/components/ProductModal";
 
 const SingleProduct = ({ productName, category, price, description, mainImg, subImages }) => {
   const [openProductModal, setOpenProductModal] = useState(false);
+  const productUrl = productName.toLowerCase().replace(/ /g, "-");
   return (
     <>
       <div className="feature-product">
@@ -27,7 +28,9 @@ const SingleProduct = ({ productName, category, price, description, mainImg, sub
             </div>
           </div>
           <div className="product-category">{category}</div>
-          <div className="product-name">{productName}</div>
+          <div className="product-name">
+            <Link to={`/shop/${productUrl}`}>{productName}</Link>
+          </div>
           <div className="product-price">{price}</div>
           <button className="buy-product">Buy Product</button>
         </div>

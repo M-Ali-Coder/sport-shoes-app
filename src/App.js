@@ -14,6 +14,8 @@ import { connect } from "react-redux";
 import { setCurrentUser } from "./redux/user/user.action";
 import ShopPage from "./components/pages/ShopPage";
 import BlogPage from "./components/pages/BlogPage";
+import ProductView from "./components/pages/ProductView";
+import FEATURES_PRODUCTS from "./data/featuresProducts";
 
 class App extends React.Component {
   unSubscribeFromAuth = null;
@@ -51,7 +53,12 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/" render={() => <HomePage />} />
           <Route path="/about" render={() => <AboutPage />} />
-          <Route path="/shop" render={() => <ShopPage />} />
+          <Route exact path="/shop" render={() => <ShopPage />} />
+          <Route
+            exact
+            path="/shop/:productParam"
+            render={() => <ProductView products={FEATURES_PRODUCTS} />}
+          />
           <Route path="/blog" render={() => <BlogPage />} />
 
           <Route

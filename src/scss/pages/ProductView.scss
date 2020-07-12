@@ -1,0 +1,214 @@
+.product-view-page-wrapper {
+  .content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 40px;
+
+    .product-images-preview {
+      #main-product-image {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .product-price {
+      font-weight: bold;
+      color: $boldRed;
+      display: flex;
+      margin: 10px 0;
+    }
+
+    .description {
+      font-size: 0.7rem;
+      margin-bottom: 10px;
+    }
+
+    .available-color-in-stock {
+      font-size: 0.7rem;
+      margin-bottom: 10px;
+
+      & > span {
+        display: block;
+        color: $boldRed;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      .colors-group {
+        display: flex;
+
+        span {
+          display: block;
+          width: 30px;
+          height: 30px;
+          margin-right: 5px;
+          border: 1px solid #888;
+          cursor: pointer;
+        }
+
+        .black {
+          background-color: #000;
+        }
+
+        .gray {
+          background-color: $gray;
+        }
+
+        .white {
+          background-color: #fff;
+        }
+      }
+    }
+
+    .available-sizes-in-stock {
+      margin: 10px 0;
+      font-size: 0.8rem;
+
+      & > span {
+        font-weight: bold;
+        color: $boldRed;
+      }
+
+      .sizes-group {
+        margin-top: 10px;
+
+        span {
+          border: 1px solid #888;
+          padding: 5px 10px;
+          margin-right: 10px;
+          text-transform: uppercase;
+          cursor: pointer;
+        }
+      }
+    }
+
+    #quantity-to-order {
+      margin: 30px 0;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .quantity-count {
+        width: 120px;
+        border: 1px solid #888;
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+        align-items: center;
+
+        button {
+          all: unset;
+          cursor: pointer;
+          padding: 5px 10px;
+        }
+
+        button:first-of-type {
+          border-right: 1px solid #888;
+        }
+        button:last-of-type {
+          border-left: 1px solid #888;
+        }
+      }
+
+      #add-to-cart-btn {
+        all: unset;
+        margin-left: 20px;
+        font-size: 0.7rem;
+        text-transform: capitalize;
+        @include customeBtn(10px, 250px, $boldRed, #fff);
+        font-weight: 600;
+      }
+    }
+  }
+
+  .product-info-tabs-section {
+    margin: 50px 0;
+
+    .tabs-navigation-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 2px solid #ebebeb;
+
+      .tabs-list {
+        display: flex;
+        align-items: center;
+
+        li {
+          margin-right: 20px;
+          cursor: pointer;
+          color: #888;
+
+          span {
+            display: block;
+            font-weight: 600;
+            text-transform: capitalize;
+            padding-bottom: 15px;
+          }
+        }
+
+        .active-tab {
+          border-bottom: 2px solid $boldRed;
+          color: #000 !important;
+        }
+      }
+    }
+
+    .tabs-content {
+      padding-top: 30px;
+
+      p {
+        font-size: 0.7rem;
+        margin-bottom: 15px;
+        color: #626262;
+      }
+      #customers {
+        font-size: 0.7rem;
+        border-collapse: collapse;
+        width: 100%;
+
+        td,
+        th {
+          border: 1px solid #ddd;
+          padding: 8px;
+        }
+
+        tr:nth-child(odd) {
+          background-color: #f2f2f2;
+        }
+
+        th {
+          padding-top: 12px;
+          padding-bottom: 12px;
+          text-align: left;
+          background-color: #4caf50;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .related-products-section {
+    h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+  }
+}
+
+@media screen and(max-width: $breakpoint-lg) {
+  .tabs-navigation-wrapper {
+    .tabs-list {
+      li {
+        span {
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+}
