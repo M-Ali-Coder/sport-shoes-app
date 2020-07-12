@@ -142,12 +142,13 @@
       }
     }
 
-    button {
+    .proceed-to-checkout-link {
       @include customeBtn(15px 10px, 250px, $boldRed, #fff);
       font-weight: bold;
       text-transform: uppercase;
       cursor: pointer;
       margin-top: 15px;
+      font-size: 0.7rem;
     }
   }
 }

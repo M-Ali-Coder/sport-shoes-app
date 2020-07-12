@@ -106,7 +106,7 @@ const FEATURES_PRODUCTS = [
       "https://demo2wpopal.b-cdn.net/ekommart/wp-content/uploads/2020/01/jordan-why-not-zer03-pf-basketball-shoe-nNTc80-2.jpg",
       "https://demo2wpopal.b-cdn.net/ekommart/wp-content/uploads/2020/01/jordan-why-not-zer03-pf-basketball-shoe-nNTc80-3.jpg",
     ],
-    productName: "Jordan ‘Why Not?’ Zer0.3 PF",
+    productName: "Jordan Why Not Zer0.3 PF",
     price: "$191.23",
     description:
       "Ut ratione qui sunt officiis quo cum ut. Quas aliquam cum ipsam facere quaerat. Et et aut quibusdam deleniti nisi sunt rerum. Consequatur molestiae ad molestias eius unde facere est architecto.",

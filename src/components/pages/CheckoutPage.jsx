@@ -47,7 +47,7 @@ class CheckoutPage extends React.Component {
               <input type="text" placeholder="PostCode" name="postCode" id="postCode" required />
 
               <button type="submit" className="registerbtn">
-                Register
+                Proceed to Checkout
               </button>
             </form>
 

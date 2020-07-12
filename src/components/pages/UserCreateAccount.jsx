@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { auth, createUserProfileDoc } from "../../firebase/firebase.util";
 
 class UserCreateAccount extends React.Component {
@@ -11,6 +10,7 @@ class UserCreateAccount extends React.Component {
       email: "",
       password: "",
       confirmPassword: "",
+      phone: "",
     };
   }
 
@@ -52,64 +52,82 @@ class UserCreateAccount extends React.Component {
   };
 
   render() {
-    const { displayName, email, password, confirmPassword } = this.state;
+    const { displayName, email, password, confirmPassword, phone } = this.state;
 
     return (
       <>
         <div className="create-an-account">
-          <form onSubmit={this.handleSubmit} autoComplete="off">
-            <div className="input-field">
+          <div className="container">
+            <form id="create-account-form" autoComplete="off">
+              <label htmlFor="email">
+                <b>Email</b>
+              </label>
               <input
                 type="text"
-                id="fname"
-                name="displayName"
-                value={displayName}
-                onChange={this.handleChange}
-                required
-              />
-              <label htmlFor="fname">Display Name:</label>
-            </div>
-            <div className="input-field">
-              <input
-                type="text"
-                id="email"
+                placeholder="Enter Email"
                 name="email"
+                id="email"
                 value={email}
                 onChange={this.handleChange}
                 required
               />
-              <label htmlFor="email">Email:</label>
-            </div>
-            <div className="input-field">
+
+              <label htmlFor="fullname">
+                <b>Full Name</b>
+              </label>
+              <input
+                type="text"
+                placeholder="Full Name"
+                name="psw"
+                id="psw"
+                value={displayName}
+                onChange={this.handleChange}
+                required
+              />
+
+              <label htmlFor="psw">
+                <b>Password</b>
+              </label>
               <input
                 type="password"
-                id="password"
-                name="password"
+                placeholder="Enter Password"
+                name="psw"
+                id="psw"
                 value={password}
                 onChange={this.handleChange}
                 required
               />
-              <label htmlFor="password">Password:</label>
-            </div>
-            <div className="input-field">
+
+              <label htmlFor="psw-repeat">
+                <b>Repeat Password</b>
+              </label>
               <input
                 type="password"
-                id="confirmPassword"
-                name="confirmPassword"
+                placeholder="Repeat Password"
+                name="psw-repeat"
+                id="psw-repeat"
                 value={confirmPassword}
                 onChange={this.handleChange}
                 required
               />
-              <label htmlFor="confirmPassword">Confirm Password:</label>
-            </div>
 
-            <button type="submit" className="submit-btn">
-              Sign up
-            </button>
-          </form>
-          <Link to="/user/signin" className="create-acccount">
-            Or Sign in
-          </Link>
+              <label htmlFor="phone">
+                <b>Phone</b>
+              </label>
+              <input
+                type="text"
+                placeholder="Phone"
+                name="phone"
+                id="phone"
+                value={phone}
+                onChange={this.handleChange}
+              />
+
+              <button type="submit" className="registerbtn">
+                Submit Payment
+              </button>
+            </form>
+          </div>
         </div>
       </>
     );

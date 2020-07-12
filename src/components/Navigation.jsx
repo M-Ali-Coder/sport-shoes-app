@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import MenuColumn from "./MenuColumn";
 
@@ -126,10 +126,7 @@ class Navigation extends React.Component {
             onMouseEnter={() => this.setState({ togglePagesMenu: true })}
             onMouseLeave={() => this.setState({ togglePagesMenu: false })}
           >
-            <NavLink to="/pages" activeClassName="active-link">
-              Pages
-            </NavLink>
-            <MdKeyboardArrowDown />
+            <Link to="#">Pages</Link>
             {togglePagesMenu && (
               <div className="pages-menu">
                 <MenuColumn title="Pre-built Pages">

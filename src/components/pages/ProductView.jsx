@@ -26,6 +26,7 @@ class ProductView extends React.Component {
       ({ productName }) => productName.toLowerCase().replace(/ /g, "-") === productParam
     );
     const { description, mainImg, price, productName } = currentProduct[0];
+    console.log(currentProduct[0]);
 
     return (
       <div className="product-view-page-wrapper">

@@ -98,7 +98,9 @@ class CartPage extends React.Component {
                 <span>$435.60</span>
               </li>
             </ul>
-            <button>proceed to checkout</button>
+            <Link to="/checkout" className="proceed-to-checkout-link">
+              proceed to checkout
+            </Link>
           </div>
         </div>
       </div>
