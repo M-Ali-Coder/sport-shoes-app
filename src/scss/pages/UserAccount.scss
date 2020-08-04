@@ -28,8 +28,7 @@
     justify-content: center;
 
     .sign-in-with-google,
-    .sign-in-with-facebook,
-    .sign-in-with-twitter {
+    .sign-in-with-facebook {
       all: unset;
       background-color: #ef3636;
       display: flex;
@@ -41,6 +40,7 @@
       overflow: hidden;
       margin-bottom: 20px;
       width: 350px;
+      border-radius: 5px;
 
       .icon-wrapper {
         height: 100%;
@@ -65,47 +65,29 @@
     }
 
     .sign-in-with-google {
-      background-color: #fff;
+      background-color: #ef3636;
 
       .icon-wrapper {
-        border-right: 2px solid #ef3636;
+        border-right: 1px solid #fff;
       }
+      span,
       svg {
-        color: #3b5998;
-      }
-      span {
-        color: #ef3636;
+        color: #fff;
         font-weight: bold;
       }
     }
 
     .sign-in-with-facebook {
-      background-color: #fff;
+      background-color: #3b5998;
 
       .icon-wrapper {
-        border-right: 2px solid #3b5998;
-      }
-      svg {
-        color: #3b5998;
+        border-right: 1px solid #fff;
       }
 
-      span {
-        color: #3b5998;
-        font-weight: bold;
-      }
-    }
-
-    .sign-in-with-twitter {
-      background-color: #fff;
-      .icon-wrapper {
-        border-right: 2px solid #1da1f2;
-      }
-      span {
-        font-weight: bold;
-        color: #1da1f2;
-      }
+      span,
       svg {
-        color: #1da1f2;
+        color: #fff;
+        font-weight: bold;
       }
     }
   }
