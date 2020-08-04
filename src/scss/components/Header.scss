@@ -81,8 +81,7 @@
           .shipping-side {
             display: flex;
 
-            .left-side,
-            .right-side {
+            .left-side {
               font-size: 0.7rem;
               font-weight: 600;
               h5 {
@@ -91,6 +90,21 @@
               h6 {
                 color: #888;
                 margin-top: 5px;
+              }
+            }
+
+            .right-side {
+              font-size: 0.8rem;
+              display: flex;
+
+              a {
+                display: inline-block;
+                margin: 0 5px;
+              }
+
+              div {
+                margin: 0 5px;
+                cursor: pointer;
               }
             }
 

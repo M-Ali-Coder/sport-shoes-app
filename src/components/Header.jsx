@@ -1,12 +1,12 @@
 import React from "react";
 import { MdSearch } from "react-icons/md";
-import { ReactComponent as PersonIcon } from "../assets/person.svg";
 import { ReactComponent as HeartIcon } from "../assets/heart.svg";
 import { ReactComponent as CartIcon } from "../assets/cart.svg";
 import Navigation from "./Navigation";
 import { Link } from "react-router-dom";
+import { auth } from "../firebase/firebase.util";
 
-const Header = () => {
+const Header = ({ userAuth }) => {
   return (
     <div className="app-header">
       <div className="container app-header-wrapper">
@@ -32,17 +32,16 @@ const Header = () => {
                 </div>
                 <div className="vertical-line" />
                 <div className="right-side">
-                  <p>FREE SHIPPING</p>
-                  <p>ON ORDERS OVER $150.0</p>
+                  {userAuth ? (
+                    <div onClick={() => auth.signOut()}>SIGN OUT</div>
+                  ) : (
+                    <Link to="/user/signin">SING IN</Link>
+                  )}
+                  <Link to="/register">SIGN UP</Link>
                 </div>
               </div>
 
               <div className="user-icon">
-                <div>
-                  <Link to="/user/signin">
-                    <PersonIcon />
-                  </Link>
-                </div>
                 <Link to="/wishlist">
                   <HeartIcon />
                   <span className="wishlist-count">1</span>

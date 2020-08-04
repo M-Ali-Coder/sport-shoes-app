@@ -74,7 +74,7 @@ class UserCreateAccount extends React.Component {
               />
 
               <label htmlFor="psw-repeat">
-                <b>Repeat Password</b>
+                <b>Confirm Password</b>
               </label>
               <input
                 type="password"
